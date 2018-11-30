@@ -4,7 +4,12 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
-const Navbar = ({handleClick, isLoggedIn}) => <div>Vic-Okurrr</div>
+const Navbar = ({handleClick, isLoggedIn}) => (
+  <div>
+    <h1>Hello</h1>
+    <hr />
+  </div>
+)
 
 /**
  * CONTAINER
