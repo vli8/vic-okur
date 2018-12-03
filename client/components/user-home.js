@@ -1,18 +1,33 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
 /**
  * COMPONENT
  */
-export const UserHome = props => {
-  const {email} = props
-
-  return (
-    <div>
-      <h3>Welcome, {email}</h3>
-    </div>
-  )
+export class UserHome extends Component {
+  componentDidMount() {}
+  handleCHange(event) {
+    console.log(event.target.value)
+  }
+  render() {
+    return (
+      <div>
+        <h3>Welcome, Enter a word</h3>
+        <form>
+          <input
+            type="text"
+            placeholder="Search.."
+            name="twitterSearch"
+            onChange={this.handleCHange}
+          />
+          <button type="submit" onSubmit={this.handleSubmit}>
+            Search
+          </button>
+        </form>
+      </div>
+    )
+  }
 }
 
 /**
